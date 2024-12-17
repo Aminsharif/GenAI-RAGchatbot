@@ -1,0 +1,14 @@
+langchain
+langchain-openai
+langchain-core
+langchain_community
+docx2txt
+pypdf
+langchain_chroma
+python-multipart
+streamlit
+python-dotenv
+ipykernel
+langchain_groq
+langchain_huggingface
+# -e .
