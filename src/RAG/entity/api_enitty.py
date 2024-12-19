@@ -3,11 +3,9 @@ from enum import Enum
 from datetime import datetime
 
 class ModelName(str, Enum):
-    gemma_7b_it = "gemma-7b-it"
     gemma2_9b_it = "gemma2-9b-it"
     llama3_groq_70b = "llama3-groq-70b-8192-tool-use-preview"
     llama3_groq_8b="llama3-groq-8b-8192-tool-use-preview"
-    distil_whisper_large_v3="distil-whisper-large-v3-en"
     llama_3_1_70b="llama-3.1-70b-versatile"
     llama_3_2_11b="llama-3.2-11b-vision-preview"
     llama_3_3_70b = "llama-3.3-70b-specdec"

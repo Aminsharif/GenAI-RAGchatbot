@@ -41,8 +41,8 @@ def upload_and_index_document(file:UploadFile = File(...)):
     temp_file_path = f"temp_{file.filename}"
 
     try:
-        with open(temp_file_path, 'wb') as buffer:
-            shutil.copyfileobj(file.filename, buffer)
+        with open(temp_file_path, "wb") as buffer:
+            shutil.copyfileobj(file.file, buffer)
 
         file_id = insert_document_record(file.filename)
         success = index_document_to_chroma(temp_file_path, file_id)
@@ -57,7 +57,7 @@ def upload_and_index_document(file:UploadFile = File(...)):
             os.remove(temp_file_path)
 
 @app.get("/list-docs", response_model=list[DocumentInfo])
-def delete_document():
+def list_documents():
     return get_all_documents()
 
 @app.post('/delete-doc')

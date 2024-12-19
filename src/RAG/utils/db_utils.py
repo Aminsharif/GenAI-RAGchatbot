@@ -79,6 +79,8 @@ def get_all_documents():
     cursor.execute('SELECT id, filename, upload_timestamp FROM document_store ORDER BY upload_timestamp DESC')
     documents = cursor.fetchall()
     conn.close()
+    for doc in documents:
+        print(dict(doc),'########################')
     return [dict(doc) for doc in documents]
 
 # Initialize the database tables
